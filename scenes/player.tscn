@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dkifnf2gqsw88"]
+
+[ext_resource type="Script" uid="uid://b0hinqqij1fpu" path="res://scenes/player.gd" id="1_3vyb7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5e3yu"]
+
+[node name="player" type="CharacterBody2D" unique_id=1348989244]
+script = ExtResource("1_3vyb7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1067316611]
+shape = SubResource("CapsuleShape2D_5e3yu")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1874523853]
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=2035310018]
+wait_time = 0.5
+one_shot = true
