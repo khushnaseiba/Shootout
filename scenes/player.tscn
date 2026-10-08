@@ -134,6 +134,11 @@ position = Vector2(-1, 1)
 shape = SubResource("CapsuleShape2D_5e3yu")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1874523853]
+zoom = Vector2(3, 3)
+limit_left = -1760
+limit_top = -1904
+limit_right = 1920
+limit_bottom = 3311
 
 [node name="ShootTimer" type="Timer" parent="." unique_id=2035310018]
 wait_time = 0.5

@@ -16,6 +16,6 @@ func _on_player_shoot(pos: Vector2, dir: Vector2) -> void:
 	var bullet = bullet_scene.instantiate() as Area2D
 	$Bullets.add_child(bullet)
 	var tween = get_tree().create_tween()
-	tween.tween_property(bullet , "scale" , Vector2(0.0,0.0) , 0.3)
-	tween.tween_property(bullet , "scale" , Vector2(1.0,1.0) , 0.4)
+	tween.tween_property(bullet , "scale" , Vector2(0.0,0.0) , 0.2)
+	tween.tween_property(bullet , "scale" , Vector2(1.5,1.5) , 0.4)
 	bullet.setup(pos,dir)
