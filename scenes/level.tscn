@@ -4498,7 +4498,6 @@ scale = Vector2(0.8972938, 0.9884785)
 [node name="Bullets" type="Node2D" parent="." unique_id=226113950]
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=184106980]
-visible = false
 color = Color(0.20511743, 0.20511743, 0.20511746, 1)
 blend_mode = 2
 
