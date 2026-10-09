@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c5jj3yw4odo2e" path="res://scenes/level.gd" id="1_w7c3h"]
 [ext_resource type="Texture2D" uid="uid://c7v0ifpdabs2i" path="res://graphics/tilesets/subway.png" id="3_w8frs"]
 [ext_resource type="Texture2D" uid="uid://cgh7234wked4l" path="res://graphics/tilesets/walls.png" id="4_mx8sn"]
+[ext_resource type="PackedScene" uid="uid://cjwvclc0kevt3" path="res://scenes/drone.tscn" id="5_ppgk2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ppgk2"]
 texture = ExtResource("3_w8frs")
@@ -3290,8 +3291,32 @@ tile_set = SubResource("TileSet_bb2ia")
 [node name="groundlayer" type="TileMapLayer" parent="layers" unique_id=792032392]
 
 [node name="player" parent="." unique_id=1348989244 instance=ExtResource("1_2q6dc")]
-position = Vector2(-1537, -1711)
+position = Vector2(-1487, -1679)
+
+[node name="drone" parent="." unique_id=1874274157 instance=ExtResource("5_ppgk2")]
+position = Vector2(-809, -1713)
+scale = Vector2(0.8972938, 0.9884785)
+
+[node name="drone2" parent="." unique_id=1109407333 instance=ExtResource("5_ppgk2")]
+position = Vector2(-212, -1660)
+scale = Vector2(0.8972938, 0.9884785)
+
+[node name="drone5" parent="." unique_id=1853939081 instance=ExtResource("5_ppgk2")]
+position = Vector2(-398, -1689)
+scale = Vector2(0.8972938, 0.9884785)
+
+[node name="drone3" parent="." unique_id=161310414 instance=ExtResource("5_ppgk2")]
+position = Vector2(-779.99994, -1723)
+scale = Vector2(0.8972938, 0.9884785)
+
+[node name="drone4" parent="." unique_id=817858673 instance=ExtResource("5_ppgk2")]
+position = Vector2(-378, -1770)
+scale = Vector2(0.8972938, 0.9884785)
 
 [node name="Bullets" type="Node2D" parent="." unique_id=226113950]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=184106980]
+color = Color(0.20511743, 0.20511743, 0.20511746, 1)
+blend_mode = 2
 
 [connection signal="shoot" from="player" to="." method="_on_player_shoot"]

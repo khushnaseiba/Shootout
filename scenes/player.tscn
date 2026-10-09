@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b0hinqqij1fpu" path="res://scenes/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://de5wf7al0hknv" path="res://graphics/characters/player.png" id="2_g2els"]
 [ext_resource type="Texture2D" uid="uid://otyoj5px7yk7" path="res://graphics/ui/crosshair.png" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://dijla4pisrrw8" path="res://graphics/lights/main.png" id="4_dqkch"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5e3yu"]
 
@@ -127,6 +128,8 @@ _data = {
 }
 
 [node name="player" type="CharacterBody2D" unique_id=1348989244]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1067316611]
@@ -166,3 +169,6 @@ texture = ExtResource("3_qhqgy")
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="." unique_id=549832935]
 libraries/ = SubResource("AnimationLibrary_smehm")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2090444879]
+texture = ExtResource("4_dqkch")

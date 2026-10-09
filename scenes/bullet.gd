@@ -1,7 +1,10 @@
 extends Area2D
 
 var direction : Vector2
+var speed := 100
 
+func _ready() -> void:
+	$AudioStreamPlayer2D.play()
 
 func setup(pos:Vector2,dir:Vector2):
 	position = pos + dir * 10
@@ -9,4 +12,11 @@ func setup(pos:Vector2,dir:Vector2):
 
 
 func _physics_process(delta: float) -> void:
-	position += direction * 30 *delta
+	position += direction * speed * delta
+
+
+
+func _on_body_entered(body) -> void:
+	if "hit" in body:
+		body.hit()
+	queue_free()

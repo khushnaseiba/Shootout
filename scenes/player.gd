@@ -24,7 +24,6 @@ func get_input():
 		velocity.y += -jump
 		
 	if Input.is_action_just_pressed("shoot") and $ShootTimer.time_left == 0:
-		print("yo")
 		shoot.emit(position,get_local_mouse_position().normalized())
 		$ShootTimer.start()
 		var tween = get_tree().create_tween()
