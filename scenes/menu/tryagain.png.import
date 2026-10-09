@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d15xeedbx8gqb"
-path="res://.godot/imported/tryagainbutton-570x200.jpeg-16efefaeae2b51835280859632ea28f2.ctex"
+uid="uid://drsvthgowo7oa"
+path="res://.godot/imported/tryagain.png-7c08b0691871c8343d931e2ca874c285.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/menu/tryagainbutton-570x200.jpeg"
-dest_files=["res://.godot/imported/tryagainbutton-570x200.jpeg-16efefaeae2b51835280859632ea28f2.ctex"]
+source_file="res://scenes/menu/tryagain.png"
+dest_files=["res://.godot/imported/tryagain.png-7c08b0691871c8343d931e2ca874c285.ctex"]
 
 [params]
 

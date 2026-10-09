@@ -1,5 +1,10 @@
 [gd_scene format=3 uid="uid://beudc6asfo2t1"]
 
+[ext_resource type="Texture2D" uid="uid://7lpjl3xk0i7q" path="res://scenes/menu/complete-1280x720.png" id="1_0oysg"]
+[ext_resource type="Script" uid="uid://cms3uadlnf2hn" path="res://scenes/complete.gd" id="1_1bquc"]
+[ext_resource type="Texture2D" uid="uid://cxsc50mioo8n5" path="res://scenes/menu/playagain.png" id="3_mr5un"]
+[ext_resource type="Texture2D" uid="uid://d0rejb6qkc480" path="res://scenes/menu/quit.png" id="4_8w4k1"]
+
 [node name="Complete" type="Control" unique_id=1548307148]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +12,32 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1bquc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2108106696]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0oysg")
+
+[node name="playagain" type="Button" parent="." unique_id=997796854]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 571.0
+offset_right = 550.0
+offset_bottom = 699.0
+icon = ExtResource("3_mr5un")
+
+[node name="quit" type="Button" parent="." unique_id=389528354]
+layout_mode = 0
+offset_left = 673.0
+offset_top = 557.0
+offset_right = 1183.0
+offset_bottom = 688.0
+icon = ExtResource("4_8w4k1")
+
+[connection signal="pressed" from="playagain" to="." method="_on_playagain_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

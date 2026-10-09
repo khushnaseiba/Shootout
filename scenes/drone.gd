@@ -5,6 +5,7 @@ var speed := 50
 var player : CharacterBody2D
 var health := 3
 
+
 func _on_area_2d_body_entered(body) -> void:
 	if body.name == "player":
 		player = body
@@ -20,14 +21,20 @@ func _on_area_2d_body_exited(_body:Node2D):
 
 
 
-func _on_area_2d_2_body_entered(_body: Node2D) -> void:
+func _on_area_2d_2_body_entered(_body) -> void:
 	explode()
-
+	change_scene.call_deferred()
+	
+func change_scene():
+	get_tree().change_scene_to_file("res://scenes/control.tscn")
 func hit():
 	health -=1
+	var drone = get_tree().get_nodes_in_group("Drones")
+	var x = drone.size() - 1
 	if health <= 0 :
 		explode()
-		
+		if x<= 0:
+			get_tree().change_scene_to_file("res://scenes/complete.tscn")
 	var tween = create_tween()
 	tween.tween_property($AnimatedSprite2D.material,'shader_parameter/progress',0.0,0.2)
 	tween.tween_property($AnimatedSprite2D.material,'shader_parameter/progress',1.0,0.5)

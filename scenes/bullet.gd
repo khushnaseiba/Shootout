@@ -18,5 +18,5 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body) -> void:
 	if "hit" in body:
-		body.hit()
+		body.hit.call_deferred()
 	queue_free()

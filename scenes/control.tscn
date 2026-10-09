@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bf7s60ixw5h6f"]
+
+[ext_resource type="Texture2D" uid="uid://8o3csskvg3e0" path="res://scenes/menu/endmenu-1280x720.png" id="1_5p55f"]
+[ext_resource type="Script" uid="uid://bsryx4evxgntk" path="res://scenes/control.gd" id="1_8n18e"]
+[ext_resource type="Texture2D" uid="uid://drsvthgowo7oa" path="res://scenes/menu/tryagain.png" id="2_brbbq"]
+[ext_resource type="Texture2D" uid="uid://d0rejb6qkc480" path="res://scenes/menu/quit.png" id="3_8n18e"]
+
+[node name="gameover" type="Control" unique_id=776188243]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8n18e")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=335777636]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5p55f")
+
+[node name="tryagain" type="Button" parent="." unique_id=1320027675]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 554.0
+offset_right = 570.0
+offset_bottom = 691.0
+icon = ExtResource("2_brbbq")
+
+[node name="quit" type="Button" parent="." unique_id=975966262]
+layout_mode = 0
+offset_left = 659.0
+offset_top = 563.0
+offset_right = 1169.0
+offset_bottom = 694.0
+icon = ExtResource("3_8n18e")
+
+[connection signal="pressed" from="tryagain" to="." method="_on_tryagain_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

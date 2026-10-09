@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4v3o64k605"
-path="res://.godot/imported/playagaibbutton-570x200.png-49b9233591a150b571200e17132d8fea.ctex"
+uid="uid://cxsc50mioo8n5"
+path="res://.godot/imported/playagain.png-5446a901d4267439809c44792d3ac717.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/menu/playagaibbutton-570x200.png"
-dest_files=["res://.godot/imported/playagaibbutton-570x200.png-49b9233591a150b571200e17132d8fea.ctex"]
+source_file="res://scenes/menu/playagain.png"
+dest_files=["res://.godot/imported/playagain.png-5446a901d4267439809c44792d3ac717.ctex"]
 
 [params]
 
